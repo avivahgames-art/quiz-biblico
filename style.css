@@ -1,0 +1,210 @@
+body {
+  margin: 0;
+  font-family: Georgia, serif;
+  background: #020202;
+  color: white;
+}
+
+.game {
+  width: 98%;
+  max-width: 1400px;
+  margin: 10px auto;
+  border: 2px solid #9b651d;
+  background: #070503;
+  box-shadow: 0 0 25px #000;
+  position: relative;
+}
+
+.topo {
+  position: absolute;
+  top: 12px;
+  left: 25px;
+  right: 25px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.btn-inicio,
+.pontos,
+.box-info {
+  height: 36px;
+  padding: 0 14px;
+  background: rgba(10, 8, 5, 0.75);
+  border: 2px solid #a87326;
+  color: #ffffff;
+  border-radius: 3px;
+  box-shadow: inset 0 0 8px #000, 0 0 0 1px #3a220b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  gap: 6px;
+}
+
+.btn-inicio {
+  cursor: pointer;
+}
+
+.pontos {
+  color: #f7d36a;
+}
+
+#contador {
+  color: black;
+  text-shadow: 1px 1px 2px rgba(255,255,255,0.5);
+}
+
+.conteudo {
+  height: 620px;
+  display: flex;
+  background-image: url("assets/fundo.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  position: relative;
+}
+
+.imagem-lateral {
+  flex: 1;
+  z-index: 1;
+}
+
+.painel {
+  flex: 1.1;
+  z-index: 2;
+  padding: 90px 30px 95px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.pergaminho-img {
+  background: url("assets/pergaminho.png") no-repeat center;
+  background-size: 100% 100%;
+  width: 550px;
+  max-width: 100%;
+  height: 80px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+}
+
+.pergaminho-img span {
+  color: #1a0f05;
+  font-size: 26px;
+  font-weight: bold;
+}
+
+#respostas {
+  width: 520px;
+  max-width: 100%;
+}
+
+.resposta {
+  width: 100%;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin: 8px 0;
+  padding: 0 16px;
+  background: linear-gradient(#171717, #070707);
+  color: #f8f0dc;
+  border: 2px solid #9b651d;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+  box-shadow: inset 0 0 10px #000, 0 2px 4px #000;
+}
+
+.letra {
+  width: 28px;
+  height: 28px;
+  border: 2px solid #d39a37;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #ffd56a;
+  background: #111;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.certa {
+  background: linear-gradient(#3aa91e, #176e0d) !important;
+}
+
+.errada {
+  background: linear-gradient(#8b1a1a, #4d0b0b) !important;
+}
+
+.check {
+  margin-left: auto;
+  width: 24px;
+  height: 24px;
+  background: #4ed61c;
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  border: 2px solid #1b6009;
+}
+
+#nextBtn {
+  width: 220px;
+  margin-top: 14px;
+  padding: 10px;
+  background: linear-gradient(#d8a233, #7a4d12);
+  color: white;
+  border: 2px solid #f7d47a;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.rodape {
+  position: absolute;
+  bottom: 12px;
+  left: 25px;
+  right: 25px;
+  z-index: 5;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  font-size: 13px;
+}
+
+.barra {
+  flex: 1;
+  height: 10px;
+  background: rgba(44, 36, 23, 0.75);
+  border-radius: 20px;
+  overflow: hidden;
+  border: 1px solid #7a4d12;
+}
+
+#progresso {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #209b19, #83ff3d);
+}
+
+#resultado {
+  max-width: 500px;
+  margin: 80px auto;
+  background: rgba(0,0,0,0.88);
+  border: 3px solid #7a4d12;
+  padding: 40px;
+  text-align: center;
+}
+
+#resultado h1 {
+  color: #f6d77a;
+}

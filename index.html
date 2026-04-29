@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Avivah Games - Quiz Bíblico</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="game">
+
+  <div class="topo">
+    <button class="btn-inicio" onclick="reiniciar()">🏠 INÍCIO</button>
+    <div id="contador">PERGUNTA 1 DE 20</div>
+    <div class="pontos">⭐ <span id="pontos">0</span></div>
+  </div>
+
+  <div class="conteudo">
+    <div class="imagem-lateral"></div>
+
+    <div class="painel">
+      <div class="pergaminho-img">
+        <span id="pergunta"></span>
+      </div>
+
+      <div id="respostas"></div>
+
+      <button id="nextBtn" onclick="proximaPergunta()" style="display:none;">PRÓXIMA ➜</button>
+    </div>
+  </div>
+
+  <div class="rodape">
+    <div class="box-info">✅ ACERTOS: <span id="acertos">0</span></div>
+    <div class="box-info">❌ ERROS: <span id="erros">0</span></div>
+
+    <div class="barra">
+      <div id="progresso"></div>
+    </div>
+
+    <div class="box-info"><span id="porcentagem">0%</span></div>
+  </div>
+
+</div>
+
+<div id="resultado" style="display:none;">
+  <h1>FIM DE JOGO!</h1>
+  <p id="resultadoTexto"></p>
+  <button onclick="reiniciar()">JOGAR NOVAMENTE</button>
+</div>
+
+<script src="perguntas.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,22 @@
+const perguntas = [
+  { pergunta: "Quem é Jesus?", opcoes: ["Um profeta", "Filho de Deus", "Um rei", "Um mestre"], correta: 1 },
+  { pergunta: "Onde Jesus nasceu?", opcoes: ["Nazaré", "Jerusalém", "Belém", "Egito"], correta: 2 },
+  { pergunta: "Quem foi a mãe de Jesus?", opcoes: ["Marta", "Maria", "Sara", "Ana"], correta: 1 },
+  { pergunta: "Quem batizou Jesus?", opcoes: ["Pedro", "João Batista", "Paulo", "Tiago"], correta: 1 },
+  { pergunta: "Quantos discípulos Jesus escolheu?", opcoes: ["10", "11", "12", "13"], correta: 2 },
+  { pergunta: "O que Jesus fez com pão e peixe?", opcoes: ["Jogou fora", "Multiplicou para multidão", "Escondeu", "Vendeu"], correta: 1 },
+  { pergunta: "Quem traiu Jesus?", opcoes: ["Pedro", "Judas Iscariotes", "João", "Mateus"], correta: 1 },
+  { pergunta: "Onde Jesus orou antes de ser preso?", opcoes: ["Monte Sinai", "Getsêmani", "Nazaré", "Belém"], correta: 1 },
+  { pergunta: "Quem negou Jesus 3 vezes?", opcoes: ["João", "Pedro", "Judas", "Tiago"], correta: 1 },
+  { pergunta: "Como Jesus morreu?", opcoes: ["Apedrejado", "Crucificado", "Enforcado", "Queimado"], correta: 1 },
+  { pergunta: "Após quantos dias Jesus ressuscitou?", opcoes: ["1", "2", "3", "7"], correta: 2 },
+  { pergunta: "Quem encontrou o túmulo vazio?", opcoes: ["Pedro", "Maria Madalena", "João", "Paulo"], correta: 1 },
+  { pergunta: "Jesus transformou água em?", opcoes: ["Suco", "Vinho", "Óleo", "Leite"], correta: 1 },
+  { pergunta: "Jesus andou sobre?", opcoes: ["Terra", "Areia", "Água", "Pedra"], correta: 2 },
+  { pergunta: "Jesus curou?", opcoes: ["Somente ricos", "Somente pobres", "Muitas pessoas", "Ninguém"], correta: 2 },
+  { pergunta: "Jesus ensinava através de?", opcoes: ["Histórias (parábolas)", "Música", "Desenhos", "Jogos"], correta: 0 },
+  { pergunta: "Qual o maior mandamento?", opcoes: ["Trabalhar", "Amar a Deus", "Estudar", "Comer"], correta: 1 },
+  { pergunta: "Jesus é chamado de?", opcoes: ["Salvador", "Guerreiro", "Juiz", "Profeta"], correta: 0 },
+  { pergunta: "O que Jesus disse?", opcoes: ["Eu sou o caminho", "Eu sou a lei", "Eu sou o rei", "Eu sou o juiz"], correta: 0 },
+  { pergunta: "O que Jesus oferece?", opcoes: ["Dinheiro", "Poder", "Vida eterna", "Fama"], correta: 2 }
+];
