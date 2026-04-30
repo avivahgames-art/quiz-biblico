@@ -7,10 +7,47 @@
 </head>
 <body>
 
-<div class="game">
+<div id="capa" class="capa">
+  <div class="topo-capa">
+    <div class="pontos-capa">🏆 <span id="pontosTotal">0</span></div>
+  </div>
+
+  <div class="capa-centro">
+    <h1>CONHECIMENTO</h1>
+    <h2>BÍBLICO</h2>
+    <div class="linha"></div>
+    <p>Aprenda, teste e fortaleça sua fé!</p>
+
+    <button class="btn-jogar" onclick="abrirJogo()">JOGAR</button>
+
+    <div class="menu">
+      <button onclick="abrirComoJogar()">❓ COMO JOGAR</button>
+      <button onclick="abrirRanking()">🏆 RANKING</button>
+    </div>
+  </div>
+</div>
+
+<div id="tela-como-jogar" class="tela-como-jogar">
+  <img src="assets/como-jogar.png" alt="Como Jogar">
+  <button onclick="fecharComoJogar()">VOLTAR</button>
+</div>
+
+<div id="tela-ranking" class="tela-ranking">
+  <img src="assets/ranking.png" alt="Ranking">
+
+  <div class="ranking-lista">
+  <table>
+    <tbody id="rankingCapaTabela"></tbody>
+  </table>
+</div>
+
+  <button onclick="fecharRanking()">VOLTAR</button>
+</div>
+
+<div id="jogo" class="game" style="display:none;">
 
   <div class="topo">
-    <button class="btn-inicio" onclick="reiniciar()">🏠 INÍCIO</button>
+    <button class="btn-inicio" onclick="voltarInicio()">🏠 INÍCIO</button>
     <div id="contador">PERGUNTA 1 DE 20</div>
     <div class="pontos">⭐ <span id="pontos">0</span></div>
   </div>
@@ -24,8 +61,6 @@
       </div>
 
       <div id="respostas"></div>
-
-      <button id="nextBtn" onclick="proximaPergunta()" style="display:none;">PRÓXIMA ➜</button>
     </div>
   </div>
 
@@ -39,13 +74,70 @@
 
     <div class="box-info"><span id="porcentagem">0%</span></div>
   </div>
+</div>
 
+<div id="overlay-acerto">
+  <div class="acerto-box">
+    <img src="assets/acerto.png" alt="Você acertou!">
+    <button onclick="fecharAcerto()">CONTINUAR</button>
+  </div>
+</div>
+
+<div id="overlay-erro">
+  <div class="erro-box">
+    <img src="assets/erro.png" alt="Você errou!">
+    <button onclick="fecharErro()">CONTINUAR</button>
+  </div>
 </div>
 
 <div id="resultado" style="display:none;">
-  <h1>FIM DE JOGO!</h1>
-  <p id="resultadoTexto"></p>
-  <button onclick="reiniciar()">JOGAR NOVAMENTE</button>
+  <div class="resultado-card">
+
+    <div class="pergaminho-final">FIM DE JOGO!</div>
+
+    <p class="mensagem-final">Parabéns! Você concluiu o quiz.</p>
+
+    <div class="resultado-conteudo">
+      <div class="quadro-pontuacao">
+        <p>SUA PONTUAÇÃO</p>
+        <h2><span id="finalPontos">0</span> 🏆</h2>
+        <div id="finalEstrelas" class="estrelas">⭐</div>
+      </div>
+
+      <div class="quadro-dados">
+        <p>✅ ACERTOS <span id="finalAcertos">0</span></p>
+        <p>❌ ERROS <span id="finalErros">0</span></p>
+        <p>⭐ RANK <span id="finalRank">---</span></p>
+        <p>⏱️ TEMPO TOTAL <span id="finalTempo">00:00</span></p>
+      </div>
+    </div>
+
+    <div class="ranking-final">
+      <h3>🏆 RANKING TOP 20</h3>
+      <table>
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Jogador</th>
+            <th>Pontos</th>
+          </tr>
+        </thead>
+        <tbody id="rankingTabela"></tbody>
+      </table>
+    </div>
+
+    <div class="botoes-final">
+      <button onclick="mostrarFinalBiblico()">✨ CONTINUAR</button>
+    </div>
+
+  </div>
+</div>
+
+<div id="final-biblico" style="display:none;">
+  <div class="botoes-final-biblico">
+    <button onclick="abrirJogo()">↻ JOGAR NOVAMENTE</button>
+    <button onclick="voltarInicio()">🏠 MENU</button>
+  </div>
 </div>
 
 <script src="perguntas.js"></script>
