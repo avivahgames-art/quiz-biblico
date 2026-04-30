@@ -1257,7 +1257,7 @@
 }
 
 .ranking-final {
-  max-height: 490px;
+  max-height: 520px;
   overflow: hidden;
 }
 
@@ -1285,4 +1285,58 @@
 #resultado .resultado-card .ranking-final table th,
 #resultado .resultado-card .ranking-final table td {
   font-size: 12px !important;
+}
+/* ===== AJUSTE MOBILE ===== */
+
+@media (max-width: 900px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .game {
+    width: 100vw;
+    max-width: none;
+    margin: 0;
+    transform: scale(0.72);
+    transform-origin: top center;
+  }
+
+  .conteudo {
+    height: 620px;
+  }
+
+  .capa {
+    background-size: cover;
+    background-position: center;
+  }
+
+  .capa-centro {
+    top: 82%;
+  }
+
+  .btn-jogar {
+    font-size: 20px;
+    padding: 12px 36px;
+  }
+
+  .menu button {
+    font-size: 11px;
+    padding: 0 12px;
+  }
+
+  #resultado .resultado-card {
+    transform: scale(0.78);
+    transform-origin: top center;
+  }
+
+  .tela-como-jogar img,
+  .tela-ranking img {
+    width: 98%;
+    height: 90%;
+  }
+
+  #final-biblico::before {
+    width: 96%;
+    height: 90%;
+  }
 }
