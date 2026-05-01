@@ -1340,3 +1340,56 @@
     height: 90%;
   }
 }
+/* ===== AJUSTE MOBILE CORRETO ===== */
+
+@media (max-width: 768px) {
+
+  body {
+    overflow-x: hidden;
+  }
+
+  .game {
+    width: 100vw;
+    max-width: 100%;
+    margin: 0;
+    border-width: 1px;
+  }
+
+  .conteudo {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  /* 🔥 faz o conteúdo subir e ocupar melhor */
+  #jogo {
+    padding-top: 10px;
+  }
+
+  /* 🔥 pergaminho mais proporcional */
+  .pergaminho-img {
+    width: 95%;
+    aspect-ratio: 5 / 1;
+    padding: 0 20px;
+  }
+
+  .pergaminho-img span {
+    font-size: 20px;
+  }
+
+  /* 🔥 respostas mais confortáveis no toque */
+  .respostas {
+    width: 95%;
+    margin: 10px auto;
+  }
+
+  .respostas button {
+    font-size: 15px;
+    padding: 14px;
+  }
+
+  /* 🔥 topo mais compacto */
+  #topo-jogo {
+    padding: 0 10px;
+  }
+
+}
