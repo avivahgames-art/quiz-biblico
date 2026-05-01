@@ -1286,110 +1286,60 @@
 #resultado .resultado-card .ranking-final table td {
   font-size: 12px !important;
 }
-/* ===== AJUSTE MOBILE ===== */
+/* ===== MOBILE HORIZONTAL SEM ALTERAR PC ===== */
 
-@media (max-width: 900px) {
+@media (pointer: coarse) and (orientation: landscape) and (max-height: 600px) {
+
+  html,
   body {
-    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    background: #000;
   }
 
   .game {
     width: 100vw;
     max-width: none;
+    height: 100vh;
     margin: 0;
-    transform: scale(0.72);
-    transform-origin: top center;
+    border-width: 1px;
+    overflow: hidden;
   }
 
   .conteudo {
-    height: 620px;
-  }
-
-  .capa {
+    height: 100vh;
     background-size: cover;
     background-position: center;
   }
 
-  .capa-centro {
-    top: 82%;
+  .painel {
+    padding: 70px 20px 60px 0;
   }
 
-  .btn-jogar {
-    font-size: 20px;
-    padding: 12px 36px;
-  }
-
-  .menu button {
-    font-size: 11px;
-    padding: 0 12px;
-  }
-
-  #resultado .resultado-card {
-    transform: scale(0.78);
-    transform-origin: top center;
-  }
-
-  .tela-como-jogar img,
-  .tela-ranking img {
-    width: 98%;
-    height: 90%;
-  }
-
-  #final-biblico::before {
-    width: 96%;
-    height: 90%;
-  }
-}
-/* ===== AJUSTE MOBILE CORRETO ===== */
-
-@media (max-width: 768px) {
-
-  body {
-    overflow-x: hidden;
-  }
-
-  .game {
-    width: 100vw;
-    max-width: 100%;
-    margin: 0;
-    border-width: 1px;
-  }
-
-  .conteudo {
-    height: auto;
-    min-height: 100vh;
-  }
-
-  /* 🔥 faz o conteúdo subir e ocupar melhor */
-  #jogo {
-    padding-top: 10px;
-  }
-
-  /* 🔥 pergaminho mais proporcional */
   .pergaminho-img {
-    width: 95%;
-    aspect-ratio: 5 / 1;
-    padding: 0 20px;
+    width: 560px;
+    height: 110px;
+    top: -30px;
   }
 
   .pergaminho-img span {
-    font-size: 20px;
+    font-size: 22px;
   }
 
-  /* 🔥 respostas mais confortáveis no toque */
-  .respostas {
-    width: 95%;
-    margin: 10px auto;
+  #respostas {
+    width: 500px;
+    top: -38px;
   }
 
-  .respostas button {
+  .resposta {
+    height: 46px;
+    margin: 6px 0;
     font-size: 15px;
-    padding: 14px;
   }
 
-  /* 🔥 topo mais compacto */
-  #topo-jogo {
-    padding: 0 10px;
+  .rodape {
+    bottom: 8px;
   }
-
 }
