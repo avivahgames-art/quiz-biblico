@@ -1286,60 +1286,69 @@
 #resultado .resultado-card .ranking-final table td {
   font-size: 12px !important;
 }
-/* ===== MOBILE HORIZONTAL SEM ALTERAR PC ===== */
+/* ===== MOBILE LANDSCAPE - OCUPAR TELA TODA ===== */
 
-@media (pointer: coarse) and (orientation: landscape) and (max-height: 600px) {
-
+@media screen and (orientation: landscape) and (max-width: 1000px) {
   html,
   body {
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
     margin: 0;
+    padding: 0;
     overflow: hidden;
     background: #000;
   }
 
   .game {
-    width: 100vw;
-    max-width: none;
-    height: 100vh;
-    margin: 0;
-    border-width: 1px;
-    overflow: hidden;
+    width: 100vw !important;
+    max-width: none !important;
+    height: 100vh !important;
+    margin: 0 !important;
+    border: 0 !important;
+    box-shadow: none !important;
   }
 
   .conteudo {
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
+    width: 100vw !important;
+    height: 100vh !important;
+    background-size: cover !important;
+    background-position: center center !important;
+  }
+
+  .topo {
+    top: 10px !important;
+    left: 18px !important;
+    right: 18px !important;
   }
 
   .painel {
-    padding: 70px 20px 60px 0;
+    padding: 72px 30px 70px 0 !important;
   }
 
   .pergaminho-img {
-    width: 560px;
-    height: 110px;
-    top: -30px;
+    width: 560px !important;
+    height: 105px !important;
+    top: -28px !important;
   }
 
   .pergaminho-img span {
-    font-size: 22px;
+    font-size: 22px !important;
   }
 
   #respostas {
-    width: 500px;
-    top: -38px;
+    width: 500px !important;
+    top: -42px !important;
   }
 
   .resposta {
-    height: 46px;
-    margin: 6px 0;
-    font-size: 15px;
+    height: 46px !important;
+    margin: 6px 0 !important;
+    font-size: 15px !important;
   }
 
   .rodape {
-    bottom: 8px;
+    bottom: 8px !important;
+    left: 18px !important;
+    right: 18px !important;
   }
 }
