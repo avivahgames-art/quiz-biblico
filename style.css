@@ -1286,29 +1286,35 @@
 #resultado .resultado-card .ranking-final table td {
   font-size: 12px !important;
 }
-/* ===== MOBILE IGUAL AO PC, APENAS REDUZIDO ===== */
+/* ================= MOBILE AJUSTE FINAL ================= */
+@media (max-width: 768px) {
 
-@media screen and (orientation: landscape) and (max-width: 1000px) {
-  html,
   body {
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    overflow: hidden !important;
-    background: #000 !important;
+    overflow-x: hidden;
   }
 
   .game {
-    width: 1400px !important;
-    max-width: none !important;
-    height: 100dvh !important;
-    margin: 0 !important;
-    transform: scale(0.57);
-    transform-origin: top left;
+    width: 1400px; /* mantém layout original do PC */
+    max-width: none;
+
+    transform: scale(0.70); /* 🔥 ajuste ideal (igual PC, só reduzido) */
+    transform-origin: top center;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    translate: -50% 0;
   }
 
+  /* evita qualquer corte interno */
   .conteudo {
-    height: 100dvh !important;
+    height: auto !important;
+    min-height: unset !important;
   }
+
+  /* garante que nada fique escondido */
+  html, body {
+    height: auto;
+  }
+
 }
