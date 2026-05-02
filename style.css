@@ -1371,3 +1371,68 @@
     font-size: 11px !important;
   }
 }
+/* ===== MOBILE FORÇADO - CELULAR DEITADO ===== */
+
+@media screen and (max-height: 700px) and (orientation: landscape) {
+
+  .game {
+    width: 100vw !important;
+    height: 100vh !important;
+    max-width: none !important;
+    margin: 0 !important;
+    border: 0 !important;
+    overflow: hidden !important;
+  }
+
+  .conteudo {
+    width: 100vw !important;
+    height: 100vh !important;
+  }
+
+  .painel {
+    padding: 48px 35px 35px 0 !important;
+  }
+
+  .pergaminho-img {
+    width: 430px !important;
+    height: 70px !important;
+    top: -22px !important;
+    padding: 0 55px !important;
+  }
+
+  .pergaminho-img span {
+    font-size: 17px !important;
+  }
+
+  #respostas {
+    width: 430px !important;
+    top: -55px !important;
+  }
+
+  .resposta {
+    height: 36px !important;
+    margin: 4px 0 !important;
+    font-size: 13px !important;
+  }
+
+  .letra {
+    width: 22px !important;
+    height: 22px !important;
+    font-size: 12px !important;
+  }
+
+  .topo {
+    top: 6px !important;
+  }
+
+  .btn-inicio,
+  .pontos,
+  .box-info {
+    height: 28px !important;
+    font-size: 11px !important;
+  }
+
+  .rodape {
+    display: none !important;
+  }
+}
