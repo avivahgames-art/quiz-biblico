@@ -1336,7 +1336,7 @@
     top: 0 !important;
     left: 50% !important;
 
-    transform: translateX(-50%) scale(0.60) !important; /* 👈 AJUSTE AQUI */
+    transform: translateX(-50%) scale(0.72) !important; /* 👈 AJUSTE AQUI */
     transform-origin: top center !important;
   }
 
