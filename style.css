@@ -1289,15 +1289,11 @@
 /* ================= MOBILE AJUSTE FINAL ================= */
 @media (max-width: 768px) {
 
-  body {
-    overflow-x: hidden;
-  }
-
-  .game {
+    .game {
     width: 1400px; /* mantém layout original do PC */
     max-width: none;
 
-    transform: scale(0.70); /* 🔥 ajuste ideal (igual PC, só reduzido) */
+    transform: scale(0.72); /* 🔥 ajuste ideal (igual PC, só reduzido) */
     transform-origin: top center;
 
     position: absolute;
