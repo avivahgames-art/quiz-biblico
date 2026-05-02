@@ -732,9 +732,16 @@ body {
     padding-top: 160px !important; /* desce somente o pergaminho e as respostas no mobile */
   }
 }
-/* ===== FORÇAR MOBILE SOMENTE TELA FINAL E ÚLTIMA TELA ===== */
+/* ===== MOBILE SOMENTE PÁGINA FINAL E ÚLTIMA PÁGINA ===== */
 
 @media screen and (orientation: landscape) and (max-height: 600px) {
+
+  body #resultado {
+    width: 100vw !important;
+    height: 100vh !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+  }
 
   body #resultado .resultado-card {
     width: 1400px !important;
@@ -746,8 +753,15 @@ body {
     top: 0 !important;
     left: 50% !important;
 
-    transform: translateX(-50%) scale(0.52) !important;
+    transform: translateX(-50%) scale(0.48) !important;
     transform-origin: top center !important;
+  }
+
+  body #final-biblico {
+    width: 100vw !important;
+    height: 100vh !important;
+    overflow: hidden !important;
+    background: #000 !important;
   }
 
   body #final-biblico::before {
@@ -758,14 +772,16 @@ body {
     top: 0 !important;
     left: 50% !important;
 
-    transform: translateX(-50%) scale(0.48) !important;
+    transform: translateX(-50%) scale(0.46) !important;
     transform-origin: top center !important;
+
+    background-size: contain !important;
   }
 
   body #final-biblico .botoes-final-biblico {
-    top: 35px !important;
-    right: 110px !important;
-    transform: scale(0.52) !important;
+    top: 28px !important;
+    right: 130px !important;
+    transform: scale(0.48) !important;
     transform-origin: top right !important;
   }
 }
