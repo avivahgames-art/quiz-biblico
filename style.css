@@ -1286,96 +1286,36 @@
 #resultado .resultado-card .ranking-final table td {
   font-size: 12px !important;
 }
-/* ================= MOBILE IGUAL AO PC - AJUSTE FINAL ================= */
-
-@media screen and (orientation: landscape) and (max-height: 600px) {
-
-  html,
-  body {
-    margin: 0 !important;
-    padding: 0 !important;
-    width: 100vw !important;
-    height: 100vh !important;
-    overflow: hidden !important;
-    background: #000 !important;
-  }
-
-  .game {
-    width: 1400px !important;
-    max-width: none !important;
-    margin: 0 !important;
-
-    position: fixed !important;
-    top: 0 !important;
-    left: 50% !important;
-
-    transform: translateX(-50%) scale(0.52) !important;
-    transform-origin: top center !important;
-  }
-
-  .conteudo {
-    height: 620px !important;
-  }
-}
-/* ===== FORÇAR CAPA MOBILE FINAL ===== */
+/* ===== CAPA MOBILE FORÇADO FINAL ===== */
 
 @media screen and (orientation: landscape) {
 
-  html,
-  body {
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-    background: #000 !important;
-  }
-
-  #capa.capa {
-    width: 100vw !important;
-    height: 100dvh !important;
-
+  html body #capa {
     position: fixed !important;
     inset: 0 !important;
 
+    width: 100vw !important;
+    height: 100vh !important;
+
     background-image: url("assets/capa.png") !important;
-    background-size: 100% auto !important;
-    background-position: center top !important;
+
+    /* 👇 AJUSTE AQUI (AGORA VAI FUNCIONAR) */
+    background-size: 90% auto !important;
+
+    background-position: center center !important;
     background-repeat: no-repeat !important;
 
     transform: none !important;
   }
 
-  #capa .capa-centro {
-    top: 82% !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-  }
-}
-/* ===== AJUSTE FINO CAPA MOBILE ===== */
-
-@media screen and (orientation: landscape) {
-
-  /* 🔻 Afasta a imagem (efeito “zoom out”) */
-  #capa {
-    background-size: 90% auto !important; /* 👈 diminui a imagem */
-    background-position: center center !important;
-  }
-
-  /* 🔻 Diminui botão principal */
-  #capa .btn-jogar {
+  html body #capa .btn-jogar {
     font-size: 18px !important;
     padding: 10px 28px !important;
   }
 
-  /* 🔻 Diminui botões inferiores */
-  #capa .menu button {
+  html body #capa .menu button {
     font-size: 12px !important;
     padding: 6px 12px !important;
-  }
-
-  /* 🔻 Ajusta posição do conteúdo */
-  #capa .capa-centro {
-    top: 78% !important;
-    transform: translate(-50%, -50%) !important;
   }
 
 }
