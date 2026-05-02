@@ -1317,20 +1317,26 @@
     height: 620px !important;
   }
 }
-/* ===== FORÇAR CAPA MOBILE FINAL ===== */
+/* ===== CAPA MOBILE IGUAL AO JOGO ===== */
 @media screen and (orientation: landscape) {
 
-  #capa.capa {
+  html, body {
+    margin: 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    background: #000 !important;
+  }
+
+  #capa {
     width: 1400px !important;
-    max-width: none !important;
-    height: 100vh !important;
+    height: 700px !important; /* 👈 ESSENCIAL */
 
     position: fixed !important;
-    top: 0 !important;
+    top: 50% !important;
     left: 50% !important;
 
-    transform: translateX(-50%) scale(0.75) !important;
-    transform-origin: top center !important;
+    transform: translate(-50%, -50%) scale(0.85) !important; /* 👈 agora funciona */
+    transform-origin: center center !important;
   }
 
 }
