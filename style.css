@@ -1317,20 +1317,28 @@
     height: 620px !important;
   }
 }
-/* ================= MOBILE CAPA FUNCIONANDO ================= */
+/* ================= CAPA MOBILE (IGUAL AO JOGO) ================= */
 
-@media (max-width: 1000px) {
+@media screen and (orientation: landscape) {
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #000;
+  }
 
   .capa {
-    width: 1400px !important;
-    max-width: none !important;
+    width: 1400px; /* mesmo layout do PC */
+    max-width: none;
+    margin: 0;
 
-    position: fixed !important;
-    top: 0 !important;
-    left: 50% !important;
+    position: fixed;
+    top: 0;
+    left: 50%;
 
-    transform: translateX(-50%) scale(0.65) !important;
-    transform-origin: top center !important;
+    transform: translateX(-50%) scale(0.52); /* 🔥 MESMO SCALE DO JOGO */
+    transform-origin: top center;
   }
 
 }
