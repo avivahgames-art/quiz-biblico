@@ -1331,7 +1331,7 @@
     top: 0 !important;
     left: 50% !important;
 
-    transform: translateX(-50%) scale(0.62) !important;
+    transform: translateX(-50%) scale(0.68) !important;
     transform-origin: top center !important;
   }
 
