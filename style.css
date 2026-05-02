@@ -724,13 +724,11 @@ body {
     top: 80% !important;
   }
 }
-/* ===== DESCER PERGAMINHO + RESPOSTAS NO MOBILE ===== */
+
+/* ================= AJUSTE FINAL MOBILE: DESCER PERGAMINHO E RESPOSTAS ================= */
 
 @media screen and (orientation: landscape) and (max-height: 600px) {
-
   #jogo.game .painel {
-    transform: translateY(60px) !important;
+    padding-top: 160px !important; /* desce somente o pergaminho e as respostas no mobile */
   }
-
-}
 }
