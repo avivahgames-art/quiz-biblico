@@ -1317,9 +1317,9 @@
     height: 620px !important;
   }
 }
-/* ================= CAPA MOBILE IGUAL AO PC ================= */
+/* ===== FORÇAR CAPA MOBILE FINAL ===== */
 
-@media screen and (orientation: landscape) and (max-height: 600px) {
+@media screen and (orientation: landscape) {
 
   html,
   body {
@@ -1332,14 +1332,13 @@
   #capa.capa {
     width: 100vw !important;
     height: 100dvh !important;
-    max-width: none !important;
 
     position: fixed !important;
     inset: 0 !important;
 
     background-image: url("assets/capa.png") !important;
     background-size: 100% auto !important;
-    background-position: center center !important;
+    background-position: center top !important;
     background-repeat: no-repeat !important;
 
     transform: none !important;
@@ -1349,14 +1348,5 @@
     top: 82% !important;
     left: 50% !important;
     transform: translate(-50%, -50%) !important;
-  }
-
-  #capa .btn-jogar {
-    font-size: 24px !important;
-    padding: 14px 46px !important;
-  }
-
-  #capa .menu {
-    top: 22px !important;
   }
 }
