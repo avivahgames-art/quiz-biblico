@@ -743,29 +743,53 @@ body {
     padding: 0 !important;
   }
 
- body #resultado .resultado-card {
-  width: 1400px !important;
-  height: 640px !important; /* 🔥 reduz altura */
+  body #resultado .resultado-card {
+    width: 1400px !important;
+    height: 700px !important;
+    max-width: none !important;
+    max-height: none !important;
 
-  display: flex !important;
-  flex-direction: column !important;
-  justify-content: space-between !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 50% !important;
 
-  position: fixed !important;
-  top: 10px !important; /* 🔥 desce um pouco */
-  left: 50% !important;
+    transform: translateX(-50%) scale(0.46) !important;
+    transform-origin: top center !important;
 
-  transform: translateX(-50%) scale(0.46) !important;
-  transform-origin: top center !important;
-}
-body #resultado .botoes-final {
-  margin-top: 5px !important;
-  transform: scale(0.9) !important;
-}
+    display: grid !important;
+    grid-template-columns: 38% 58% !important;
+    grid-template-rows: auto auto 1fr auto !important;
+    gap: 8px 22px !important;
+  }
 
-body #resultado .resultado-conteudo {
-  transform: scale(0.92);
-}
+  body #resultado .pergaminho-final {
+    grid-column: 1 / 3 !important;
+  }
+
+  body #resultado .mensagem-final {
+    grid-column: 1 / 3 !important;
+  }
+
+  body #resultado .resultado-conteudo {
+    grid-column: 1 !important;
+    grid-row: 3 !important;
+    display: flex !important;
+    flex-direction: column !important;
+    transform: none !important;
+  }
+
+  body #resultado .ranking-final {
+    grid-column: 2 !important;
+    grid-row: 3 !important;
+    max-height: 520px !important;
+  }
+
+  body #resultado .botoes-final {
+    grid-column: 1 / 3 !important;
+    grid-row: 4 !important;
+    transform: none !important;
+  }
+
   body #final-biblico {
     width: 100vw !important;
     height: 100vh !important;
@@ -781,16 +805,16 @@ body #resultado .resultado-conteudo {
     top: 0 !important;
     left: 50% !important;
 
-    transform: translateX(-50%) scale(0.44) !important;
+    transform: translateX(-50%) scale(0.46) !important;
     transform-origin: top center !important;
 
     background-size: contain !important;
   }
 
   body #final-biblico .botoes-final-biblico {
-    top: 28px !important;
-    right: 130px !important;
-    transform: scale(0.48) !important;
+    top: 35px !important;
+    right: 45px !important;
+    transform: scale(0.46) !important;
     transform-origin: top right !important;
   }
 }
