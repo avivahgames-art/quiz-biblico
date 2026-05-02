@@ -1350,3 +1350,32 @@
     transform: translate(-50%, -50%) !important;
   }
 }
+/* ===== AJUSTE FINO CAPA MOBILE ===== */
+
+@media screen and (orientation: landscape) {
+
+  /* 🔻 Afasta a imagem (efeito “zoom out”) */
+  #capa {
+    background-size: 90% auto !important; /* 👈 diminui a imagem */
+    background-position: center center !important;
+  }
+
+  /* 🔻 Diminui botão principal */
+  #capa .btn-jogar {
+    font-size: 18px !important;
+    padding: 10px 28px !important;
+  }
+
+  /* 🔻 Diminui botões inferiores */
+  #capa .menu button {
+    font-size: 12px !important;
+    padding: 6px 12px !important;
+  }
+
+  /* 🔻 Ajusta posição do conteúdo */
+  #capa .capa-centro {
+    top: 78% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+
+}
