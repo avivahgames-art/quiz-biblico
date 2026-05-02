@@ -1286,26 +1286,16 @@
 #resultado .resultado-card .ranking-final table td {
   font-size: 12px !important;
 }
-/* ===== CAPA MOBILE FORÇADO FINAL ===== */
+/* ===== CAPA MOBILE COM IMAGEM <img> ===== */
 
 @media screen and (orientation: landscape) {
 
-  html body #capa {
-    position: fixed !important;
-    inset: 0 !important;
-
+  html body #capa img {
     width: 100vw !important;
     height: 100vh !important;
 
-    background-image: url("assets/capa.png") !important;
-
-    /* 👇 AJUSTE AQUI (AGORA VAI FUNCIONAR) */
-    background-size: 90% auto !important;
-
-    background-position: center center !important;
-    background-repeat: no-repeat !important;
-
-    transform: none !important;
+    object-fit: contain !important; /* deixa a imagem mais distante */
+    object-position: center center !important;
   }
 
   html body #capa .btn-jogar {
@@ -1318,4 +1308,7 @@
     padding: 6px 12px !important;
   }
 
+  html body #capa .capa-centro {
+    top: 78% !important;
+  }
 }
