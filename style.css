@@ -1317,23 +1317,20 @@
     height: 620px !important;
   }
 }
-/* ================= MOBILE CAPA IGUAL AO PC ================= */
+/* ================= MOBILE CAPA FUNCIONANDO ================= */
 
-@media screen and (orientation: landscape) and (max-height: 600px) {
+@media (max-width: 1000px) {
 
   .capa {
     width: 1400px !important;
     max-width: none !important;
-    height: 100vh !important;
-    margin: 0 !important;
 
     position: fixed !important;
     top: 0 !important;
     left: 50% !important;
 
-    transform: translateX(-50%) scale(0.68) !important;
+    transform: translateX(-50%) scale(0.65) !important;
     transform-origin: top center !important;
   }
 
 }
-
