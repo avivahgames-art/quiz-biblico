@@ -1,88 +1,4 @@
-/* ===== CORREÇÃO FINAL DO RANKING DA PÁGINA FINAL ===== */
-
-#resultado {
-  height: 100vh !important;
-  overflow: hidden !important;
-  padding: 8px !important;
-  box-sizing: border-box !important;
-  align-items: flex-start !important;
-}
-
-#resultado .resultado-card {
-  width: 95% !important;
-  max-width: 1150px !important;
-  height: 96vh !important;
-  padding: 10px 16px !important;
-  box-sizing: border-box !important;
-
-  display: grid !important;
-  grid-template-columns: 38% 58% !important;
-  grid-template-rows: auto auto 1fr auto !important;
-  gap: 8px 22px !important;
-}
-
-#resultado .pergaminho-final {
-  grid-column: 1 / 3 !important;
-  justify-self: center !important;
-  margin: 0 auto 2px !important;
-}
-
-#resultado .mensagem-final {
-  grid-column: 1 / 3 !important;
-  text-align: center !important;
-  margin: 0 0 6px !important;
-  font-size: 15px !important;
-}
-
-#resultado .resultado-conteudo {
-  grid-column: 1 !important;
-  grid-row: 3 !important;
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 10px !important;
-  margin: 0 !important;
-}
-
-#resultado .ranking-final {
-  grid-column: 2 !important;
-  grid-row: 3 !important;
-
-  width: 100% !important;
-  margin: 0 !important;
-  padding: 10px !important;
-  box-sizing: border-box !important;
-
-  max-height: 455px !important;
-  overflow: hidden !important;
-}
-
-#resultado .ranking-final h3 {
-  font-size: 15px !important;
-  margin: 0 0 6px !important;
-}
-
-#resultado .ranking-final table {
-  font-size: 11px !important;
-  width: 100% !important;
-}
-
-#resultado .ranking-final th,
-#resultado .ranking-final td {
-  padding: 2px 5px !important;
-}
-
-#resultado .botoes-final {
-  grid-column: 1 / 3 !important;
-  grid-row: 4 !important;
-  margin-top: 4px !important;
-  display: flex !important;
-  justify-content: center !important;
-}
-
-#resultado .botoes-final button {
-  height: 34px !important;
-  padding: 0 22px !important;
-}body {
+body {
   margin: 0;
   font-family: Georgia, serif;
   background: #020202;
@@ -108,6 +24,11 @@
   outline: 4px solid #a87326;
   outline-offset: -4px;
   box-shadow: inset 0 0 40px #000;
+}
+
+/* Caso tenha sido adicionada imagem <img> da capa no HTML, esconde para não duplicar */
+#capa .img-capa {
+  display: none !important;
 }
 
 .topo-capa {
@@ -137,7 +58,6 @@
   display: none;
 }
 
-/* 🔥 ALTERAÇÃO AQUI (posição 82%) */
 .capa-centro {
   position: absolute;
   top: 82%;
@@ -148,20 +68,15 @@
   align-items: center;
 }
 
-/* 🔥 BOTÃO DOURADO */
 .btn-jogar {
   padding: 16px 50px;
   font-size: 26px;
   font-weight: bold;
   color: #fff3c2;
-
   background: linear-gradient(180deg, #d4af37, #8b6a1e);
-
   border: 3px solid #f7d36a;
   border-radius: 40px;
-
   cursor: pointer;
-
   box-shadow:
     0 5px 0 #5c4212,
     0 8px 18px rgba(0,0,0,0.5),
@@ -188,7 +103,7 @@
   box-shadow: inset 0 0 10px #000, 0 2px 4px #000;
 }
 
-/* ================= JOGO (NÃO ALTERADO) ================= */
+/* ================= JOGO ================= */
 
 .game {
   width: 98%;
@@ -269,25 +184,19 @@
 
 .pergaminho-img {
   background: url("assets/pergaminho.png") no-repeat center;
-  background-size: 100% 100%; /* 🔥 agora preenche toda largura */
-
-  width:600px;   /* 🔥 controla largura real */
+  background-size: 100% 100%;
+  width: 600px;
   max-width: 150%;
-
-  height: 150px;   /* 🔥 controla altura */
-
-  margin: -60 auto 10px auto;
-
+  height: 150px;
+  margin: -60px auto 10px auto;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  padding: 0 80px; /* 🔥 espaço do texto */
-
+  padding: 0 80px;
   box-sizing: border-box;
   text-align: center;
   position: relative;
-  top: -40px; /* 🔥 sobe o pergaminho */
+  top: -40px;
 }
 
 .pergaminho-img span {
@@ -302,8 +211,7 @@
   max-width: 100%;
   margin-top: -20px;
   position: relative;
-  top: -30px; /* 🔥 sobe respostas */
-
+  top: -30px;
 }
 
 .resposta {
@@ -372,7 +280,7 @@
   background: linear-gradient(90deg, #209b19, #83ff3d);
 }
 
-/* ================= OVERLAY ================= */
+/* ================= OVERLAYS ACERTO/ERRO ================= */
 
 #overlay-acerto,
 #overlay-erro {
@@ -395,78 +303,83 @@
 .erro-box button {
   margin-top: 8px;
   padding: 10px 26px;
-
   font-size: 15px;
   font-weight: bold;
-
-  color: #1a1a1a; /* texto preto */
-
-  background: linear-gradient(180deg, #f7d36a, #b88a2a); /* dourado */
-
+  color: #1a1a1a;
+  background: linear-gradient(180deg, #f7d36a, #b88a2a);
   border: 2px solid #d4af37;
   border-radius: 4px;
-
   cursor: pointer;
-
   box-shadow:
     0 2px 0 #5c4212,
     0 4px 10px rgba(0,0,0,0.5),
     inset 0 0 6px rgba(255, 230, 150, 0.5);
 }
-/* ================= TELA FINAL ================= */
+
+/* ================= TELA FINAL / RESULTADO ================= */
 
 #resultado {
-  height: 100vh;
-  overflow: hidden;
+  height: 100vh !important;
+  overflow: hidden !important;
+  padding: 8px !important;
+  box-sizing: border-box !important;
+  align-items: flex-start !important;
+  justify-content: center;
+  text-align: center;
+  color: #f8f0dc;
   background-image: url("assets/final.png");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
-  justify-content: center;
-  align-items: flex-start;
-  text-align: center;
-  color: #f8f0dc;
-  padding-top: 8px;
-  box-sizing: border-box;
 }
 
-.resultado-card {
-  width: 95%;
-  max-width: 1150px;
-  max-height: 96vh;
-  padding: 10px 16px 12px;
+#resultado .resultado-card {
+  width: 95% !important;
+  max-width: 1150px !important;
+  height: 96vh !important;
+  padding: 10px 16px !important;
+  box-sizing: border-box !important;
   border: 3px solid #9b651d;
   background: rgba(0,0,0,0.35);
   box-shadow: inset 0 0 35px #000, 0 0 25px #000;
-  box-sizing: border-box;
+  display: grid !important;
+  grid-template-columns: 38% 58% !important;
+  grid-template-rows: auto auto 1fr auto !important;
+  gap: 8px 22px !important;
 }
 
-.pergaminho-final {
-  width: 480px;
+#resultado .pergaminho-final {
+  grid-column: 1 / 3 !important;
+  justify-self: center !important;
+  width: 380px;
+  height: 90px;
   max-width: 90%;
-  height: 56px;
-  margin: 0 auto 4px;
+  margin: 0 auto 2px !important;
   background: url("assets/pergaminho.png") no-repeat center;
   background-size: 100% 100%;
   color: #1a0f05;
-  font-size: 26px;
+  font-size: 24px;
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.mensagem-final {
-  font-size: 15px;
+#resultado .mensagem-final {
+  grid-column: 1 / 3 !important;
+  text-align: center !important;
+  margin: -8px 0 6px !important;
+  font-size: 15px !important;
   color: #f8f0dc;
-  margin: 2px 0 10px;
 }
 
-.resultado-conteudo {
-  display: flex;
-  justify-content: center;
-  gap: 28px;
-  margin-bottom: 28px;
+#resultado .resultado-conteudo {
+  grid-column: 1 !important;
+  grid-row: 3 !important;
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 10px !important;
+  margin: 0 !important;
 }
 
 .quadro-pontuacao,
@@ -474,12 +387,9 @@
   background: rgba(10, 8, 5, 0.82);
   border: 2px solid #9b651d;
   border-radius: 6px;
-  padding: 22px;
+  padding: 16px;
   box-shadow: inset 0 0 15px #000;
-}
-
-.quadro-pontuacao {
-  width: 280px;
+  width: auto;
 }
 
 .quadro-pontuacao p {
@@ -488,21 +398,20 @@
 }
 
 .quadro-pontuacao h2 {
-  font-size: 48px;
+  font-size: 38px;
   color: #f7d36a;
   margin: 5px 0;
 }
 
 .estrelas {
-  font-size: 34px;
+  font-size: 26px;
   color: gold;
   letter-spacing: 4px;
 }
 
 .quadro-dados {
-  width: 240px;
   text-align: left;
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .quadro-dados p {
@@ -513,163 +422,63 @@
   padding-bottom: 8px;
 }
 
-.botoes-final {
-  display: flex;
-  justify-content: center;
+#resultado .ranking-final {
+  grid-column: 2 !important;
+  grid-row: 3 !important;
+  width: 100% !important;
+  max-width: none !important;
+  margin: 0 !important;
+  padding: 10px !important;
+  box-sizing: border-box !important;
+  max-height: 520px !important;
+  overflow: hidden !important;
+  background: rgba(10, 8, 5, 0.82);
+  border: 2px solid #9b651d;
+  border-radius: 6px;
+  box-shadow: inset 0 0 15px #000;
+}
+
+#resultado .ranking-final h3 {
+  font-size: 15px !important;
+  margin: 0 0 6px !important;
+  color: #f7d36a;
+}
+
+#resultado .ranking-final table,
+#resultado .ranking-final table th,
+#resultado .ranking-final table td {
+  font-size: 12px !important;
+}
+
+#resultado .ranking-final table {
+  width: 100% !important;
+  border-collapse: collapse;
+  color: #f8f0dc;
+}
+
+#resultado .ranking-final th,
+#resultado .ranking-final td {
+  padding: 2px 5px !important;
+  border-bottom: 1px solid rgba(155,101,29,0.4);
+}
+
+#resultado .ranking-final th {
+  color: #f7d36a;
+}
+
+#resultado .botoes-final {
+  grid-column: 1 / 3 !important;
+  grid-row: 4 !important;
+  margin-top: 4px !important;
+  display: flex !important;
+  justify-content: center !important;
   gap: 18px;
   flex-wrap: wrap;
 }
 
-.botoes-final button {
-  height: 42px;
-  padding: 0 18px;
-  background: linear-gradient(#171717, #070707);
-  color: #f8f0dc;
-  border: 2px solid #9b651d;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: inset 0 0 10px #000, 0 2px 4px #000;
-}
-/* ===== TELA FINAL BÍBLICA (IMAGEM LIMPA) ===== */
-
-#final-biblico {
-  height: 100vh;
-  width: 100%;
-
-  background: url("assets/final.png") no-repeat center;
-  background-size: cover;
-
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-/* BOTÕES */
-.botoes-final-biblico {
-  margin-bottom: 50px;
-  display: flex;
-  gap: 20px;
-}
-
-.botoes-final-biblico button {
-  padding: 12px 22px;
-
-  background: linear-gradient(#171717, #070707);
-  color: #f8f0dc;
-
-  border: 2px solid #9b651d;
-  border-radius: 5px;
-
-  font-weight: bold;
-  cursor: pointer;
-
-  box-shadow: inset 0 0 10px #000, 0 2px 4px #000;
-}
-/* ================= TELA DE RESULTADO ================= */
-
-#resultado {
-  min-height: 100vh;
-  background-image: url("assets/final.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  color: #f8f0dc;
-}
-
-.resultado-card {
-  width: 90%;
-  max-width: 900px;
-  padding: 25px;
-  border: 3px solid #9b651d;
-  background: rgba(0,0,0,0.35);
-  box-shadow: inset 0 0 35px #000, 0 0 25px #000;
-}
-
-.pergaminho-final {
-  width: 520px;
-  max-width: 90%;
-  height: 75px;
-  margin: 0 auto 10px;
-  background: url("assets/pergaminho.png") no-repeat center;
-  background-size: 100% 100%;
-  color: #1a0f05;
-  font-size: 30px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.mensagem-final {
-  font-size: 18px;
-  color: #f8f0dc;
-  margin-bottom: 25px;
-}
-
-.resultado-conteudo {
-  display: flex;
-  justify-content: center;
-  gap: 28px;
-  margin-bottom: 28px;
-}
-
-.quadro-pontuacao,
-.quadro-dados {
-  background: rgba(10, 8, 5, 0.82);
-  border: 2px solid #9b651d;
-  border-radius: 6px;
-  padding: 22px;
-  box-shadow: inset 0 0 15px #000;
-}
-
-.quadro-pontuacao {
-  width: 280px;
-}
-
-.quadro-pontuacao p {
-  font-size: 14px;
-  margin: 0 0 8px;
-}
-
-.quadro-pontuacao h2 {
-  font-size: 48px;
-  color: #f7d36a;
-  margin: 5px 0;
-}
-
-.estrelas {
-  font-size: 34px;
-  color: gold;
-  letter-spacing: 4px;
-}
-
-.quadro-dados {
-  width: 260px;
-  text-align: left;
-  font-size: 16px;
-}
-
-.quadro-dados p {
-  display: flex;
-  justify-content: space-between;
-  gap: 20px;
-  border-bottom: 1px solid rgba(155,101,29,0.4);
-  padding-bottom: 8px;
-}
-
-.botoes-final {
-  display: flex;
-  justify-content: center;
-}
-
-.botoes-final button {
-  height: 42px;
-  padding: 0 24px;
+#resultado .botoes-final button {
+  height: 34px !important;
+  padding: 0 22px !important;
   background: linear-gradient(#171717, #070707);
   color: #f8f0dc;
   border: 2px solid #9b651d;
@@ -685,258 +494,49 @@
 #final-biblico {
   height: 100vh;
   width: 100%;
-  background: url("assets/final-biblico.png") no-repeat center;
-  background-size: cover;
-  display: flex;
-  justify-content: center;
-  align-items: flex-end;
-}
-
-.botoes-final-biblico {
-  margin-bottom: 50px;
-  display: flex;
-  gap: 20px;
-}
-
-.botoes-final-biblico button {
-  padding: 12px 22px;
-  background: linear-gradient(#171717, #070707);
-  color: #f8f0dc;
-  border: 2px solid #9b651d;
-  border-radius: 5px;
-  font-weight: bold;
-  cursor: pointer;
-  box-shadow: inset 0 0 10px #000, 0 2px 4px #000;
-}
-.ranking-final {
-  width: 90%;
-  max-width: 650px;
-  margin: 15px auto 20px;
-  padding: 12px;
-  background: rgba(10, 8, 5, 0.82);
-  border: 2px solid #9b651d;
-  border-radius: 6px;
-  box-shadow: inset 0 0 15px #000;
-}
-
-.ranking-final h3 {
-  margin: 0 0 10px;
-  color: #f7d36a;
-  font-size: 18px;
-}
-
-.ranking-final table {
-  width: 100%;
-  border-collapse: collapse;
-  color: #f8f0dc;
-  font-size: 13px;
-}
-
-.ranking-final th,
-.ranking-final td {
-  padding: 5px;
-  border-bottom: 1px solid rgba(155,101,29,0.4);
-}
-
-.ranking-final th {
-  color: #f7d36a;
-}
-/* ===== ORGANIZAÇÃO FINAL SEM ROLAGEM ===== */
-
-#resultado {
-  height: 100vh;
   overflow: hidden;
-  padding: 10px;
-  box-sizing: border-box;
-}
-
-.resultado-card {
-  width: 95%;
-  max-width: 1150px;
-  max-height: 96vh;
-  padding: 16px;
-  box-sizing: border-box;
-
-  display: grid;
-  grid-template-columns: 38% 58%;
-  grid-template-rows: auto auto 1fr auto;
-  gap: 12px 22px;
-}
-
-.pergaminho-final {
-  width: 380px;  /* 🔽 menor largura */
-  height: 90px;  /* 🔼 maior altura */
-
-  max-width: 90%;
-  margin: 0 auto 6px auto;
-  display: flex;
-  justify-content: center;
-
-  background: url("assets/pergaminho.png") no-repeat center;
-  background-size: 100% 100%;
-
-  color: #1a0f05;
-  font-size: 24px;
-  font-weight: bold;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-#resultado .mensagem-final {
-  grid-column: 1 / 3 !important;
-  text-align: center !important;
-
-  margin: -8px 0 6px !important; /* 🔥 sobe um pouco */
-
-  font-size: 15px !important;
-}
-
-.resultado-conteudo {
-  grid-column: 1;
-  display: flex;
-  flex-direction: column;
-  gap: 12px;
-  margin: 0;
-}
-
-.quadro-pontuacao,
-.quadro-dados {
-  width: auto;
-  padding: 16px;
-}
-
-.quadro-pontuacao h2 {
-  font-size: 38px;
-}
-
-.estrelas {
-  font-size: 26px;
-}
-
-.quadro-dados {
-  font-size: 14px;
-}
-
-.ranking-final {
-  grid-column: 2;
-  grid-row: 3;
-  width: 100%;
-  max-width: none;
-  margin: 0;
-  padding: 12px;
-  box-sizing: border-box;
-}
-
-.ranking-final h3 {
-  font-size: 16px;
-  margin-bottom: 8px;
-}
-
-.ranking-final table {
-  font-size: 13px;
-}
-
-.ranking-final th,
-.ranking-final td {
-  padding: 3px 5px;
-}
-
-.botoes-final {
-  grid-column: 1 / 3;
-  margin-top: 4px;
-}
-
-/* ===== AJUSTE ÚLTIMA PÁGINA ===== */
-
-#final-biblico {
-  height: 100vh;
-  width: 100%;
-  overflow: hidden;
-
   display: flex;
   justify-content: center;
   align-items: center;
-
   background: #000;
+  position: relative;
 }
 
-/* CONTAINER DA IMAGEM */
 #final-biblico::before {
   content: "";
   width: 80%;
   height: 94%;
-
   background: url("assets/final-biblico.png") no-repeat center;
   background-size: contain;
-
   border: 4px solid #a87326;
   box-shadow: inset 0 0 25px #000, 0 0 20px #000;
-
   display: block;
 }
 
-/* BOTÕES */
 .botoes-final-biblico {
   position: absolute;
   top: 85px;
   right: 20px;
-
-
-  display: flex;
-  flex-direction: column; /* um em cima do outro */
-  gap: 10px;
-}
-  padding: 10px 18px;
-
-  font-size: 14px;
-  font-weight: bold;
-
-  color: #1a1a1a; /* texto escuro */
-
-  background: linear-gradient(180deg, #f7d36a, #b88a2a); /* dourado igual borda */
-
-  border: 2px solid #d4af37;
-  border-radius: 4px;
-
-  cursor: pointer;
-
-  box-shadow:
-    0 2px 0 #5c4212,
-    0 4px 10px rgba(0,0,0,0.5),
-    inset 0 0 6px rgba(255, 230, 150, 0.5);
-} 
-  position: absolute;
-  top: 90px;
-  right: 20px;
-
   display: flex;
   flex-direction: column;
   gap: 10px;
-
 }
 
-/* FORÇAR COR DOS BOTÕES DA ÚLTIMA PÁGINA */
-
 #final-biblico .botoes-final-biblico button {
+  padding: 10px 18px;
+  font-size: 14px;
+  font-weight: bold;
   color: #1a1a1a !important;
-
   background: linear-gradient(180deg, #f7d36a, #b88a2a) !important;
-
   border: 2px solid #d4af37 !important;
-
+  border-radius: 4px;
+  cursor: pointer;
   box-shadow:
     0 2px 0 #5c4212,
     0 4px 10px rgba(0,0,0,0.5),
     inset 0 0 6px rgba(255, 230, 150, 0.5) !important;
 }
-/* SOMENTE COR DOS 2 BOTÕES DA ÚLTIMA PÁGINA */
-#final-biblico .botoes-final-biblico button {
-  color: #1a1a1a !important;
-  background: linear-gradient(180deg, #f7d36a, #b88a2a) !important;
-  border-color: #d4af37 !important;
-}
+
 /* ================= TELA COMO JOGAR ================= */
 
 .tela-como-jogar {
@@ -961,17 +561,15 @@
   position: absolute;
   bottom: 50px;
   right: 280px;
-
   padding: 10px 18px;
   font-weight: bold;
-
   color: #1a1a1a;
   background: linear-gradient(180deg, #f7d36a, #b88a2a);
   border: 2px solid #d4af37;
   border-radius: 4px;
-
   cursor: pointer;
 }
+
 /* ================= TELA RANKING CAPA ================= */
 
 .tela-ranking {
@@ -994,212 +592,15 @@
 
 .ranking-lista {
   position: absolute;
-  top: 13%;
-  left: 12%;
-  width: 45%;
-  color: #f7d36a;
-  font-family: Georgia, serif;
-}
-
-.ranking-lista h2 {
-  text-align: center;
-  font-size: 22px;
-  margin-bottom: 12px;
-}
-
-.ranking-lista table {
-  width: 100%;
-  border-collapse: collapse;
-  font-size: 15px;
-}
-
-.ranking-lista td {
-  padding: 5px 10px;
-  border-bottom: 1px solid rgba(168,115,38,0.35);
-}
-
-.tela-ranking button {
-  position: absolute;
-  bottom: 50px;
-  right: 120px;
-
-  padding: 10px 18px;
-  font-weight: bold;
-
-  color: #1a1a1a;
-  background: linear-gradient(180deg, #f7d36a, #b88a2a);
-  border: 2px solid #d4af37;
-  border-radius: 4px;
-
-  cursor: pointer;
-}
-/* AJUSTE RANKING DA CAPA */
-
-.ranking-lista {
-  position: absolute;
-  top: 22%;
-  left: 8%;
-
-  width: 48%;
-  height: 54%;
-
-  color: #f7d36a;
-  font-family: Georgia, serif;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-}
-
-/* título */
-.ranking-lista h2 {
-  font-size: 22px;
-  margin: 0 0 10px;
-  color: #f7d36a;
-  text-shadow: 2px 2px 4px #000;
-}
-
-/* tabela dentro do retângulo */
-.ranking-lista table {
-  width: 92%;
-  border-collapse: collapse;
-  font-size: 14px;
-  background: rgba(0,0,0,0.25);
-}
-
-/* linhas */
-.ranking-lista td {
-  padding: 4px 8px;
-  border-bottom: 1px solid rgba(168,115,38,0.35);
-  color: #f8f0dc;
-}
-
-/* posição */
-.rank-posicao {
-  width: 70px;
-  color: #f7d36a;
-  font-weight: bold;
-}
-
-/* top 3 */
-.ranking-lista tr:nth-child(1) td {
-  color: #ffd700;
-  font-weight: bold;
-}
-
-.ranking-lista tr:nth-child(2) td {
-  color: #d9d9d9;
-  font-weight: bold;
-}
-
-.ranking-lista tr:nth-child(3) td {
-  color: #cd7f32;
-  font-weight: bold;
-}
-/* AJUSTE FINAL DO RANKING DA CAPA */
-
-.ranking-lista {
-  position: absolute;
-  top: 23%;
-  left: 7%;
-  width: 50%;
-  height: 55%;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-
-  color: #f7d36a;
-  font-family: Georgia, serif;
-}
-
-.ranking-lista h2 {
-  font-size: 18px;
-  margin: 0 0 8px;
-  color: #f7d36a;
-  text-align: center;
-}
-
-.ranking-lista table {
-  width: 88%;
-  max-width: 560px;
-  border-collapse: collapse;
-  font-size: 12px;
-  margin: 0 auto;
-}
-
-.ranking-lista td {
-  padding: 3px 8px;
-  border-bottom: 1px solid rgba(168,115,38,0.35);
-  color: #f8f0dc;
-}
-
-.rank-posicao {
-  width: 70px;
-  text-align: center;
-  font-weight: bold;
-}
-
-.ranking-lista td:nth-child(2) {
-  text-align: left;
-}
-
-.ranking-lista td:nth-child(3) {
-  text-align: right;
-}
-
-/* cor das 3 coroas */
-.ranking-lista tr:nth-child(1) .rank-posicao {
-  color: #ffd700;
-}
-
-.ranking-lista tr:nth-child(2) .rank-posicao {
-  color: #c0c0c0;
-}
-
-.ranking-lista tr:nth-child(3) .rank-posicao {
-  color: #cd7f32;
-}
-
-/* cor das linhas top 3 */
-.ranking-lista tr:nth-child(1) td {
-  color: #ffd700;
-  font-weight: bold;
-}
-
-.ranking-lista tr:nth-child(2) td {
-  color: #c0c0c0;
-  font-weight: bold;
-}
-
-.ranking-lista tr:nth-child(3) td {
-  color: #cd7f32;
-  font-weight: bold;
-}
-/* ===== AJUSTE RANKING DA CAPA ===== */
-
-.ranking-lista {
-  position: absolute;
   top: 26%;
   left: 25%;
   width: 28%;
   height: 48%;
-
   display: flex;
   flex-direction: column;
   align-items: center;
-
   color: #f7d36a;
   font-family: Georgia, serif;
-}
-
-.ranking-lista h2 {
-  font-size: 16px;
-  margin: 0 0 6px;
-  color: #f7d36a;
-  text-align: center;
-  text-shadow: 2px 2px 4px #000;
 }
 
 .ranking-lista table {
@@ -1250,66 +651,76 @@
   font-weight: bold;
 }
 
-/* AJUSTE PARA BOTÃO APARECER NA TELA FINAL */
-
-.resultado-conteudo {
-  margin-bottom: 10px;
+.tela-ranking button {
+  position: absolute;
+  bottom: 50px;
+  right: 120px;
+  padding: 10px 18px;
+  font-weight: bold;
+  color: #1a1a1a;
+  background: linear-gradient(180deg, #f7d36a, #b88a2a);
+  border: 2px solid #d4af37;
+  border-radius: 4px;
+  cursor: pointer;
 }
 
-.ranking-final {
-  max-height: 520px;
-  overflow: hidden;
-}
+/* ================= MOBILE: JOGO CERTO + CAPA AJUSTADA ================= */
 
-.ranking-final table {
-  font-size: 15px;
-}
-
-.ranking-final th,
-.ranking-final td {
-  padding: 3px 5px;
-}
-
-.botoes-final {
-  margin-top: 8px;
-  display: flex;
-  justify-content: center;
-}
-
-.botoes-final button {
-  height: 36px;
-  padding: 0 22px;
-}
-/* AUMENTAR LETRA DO RANKING FINAL */
-#resultado .resultado-card .ranking-final table,
-#resultado .resultado-card .ranking-final table th,
-#resultado .resultado-card .ranking-final table td {
-  font-size: 12px !important;
-}
-/* ===== CAPA MOBILE ISOLADA (NÃO AFETA O JOGO) ===== */
-
-@media screen and (orientation: landscape) {
-
-  #capa .img-capa {
+@media screen and (orientation: landscape) and (max-height: 600px) {
+  html,
+  body {
+    margin: 0 !important;
+    padding: 0 !important;
     width: 100vw !important;
     height: 100vh !important;
+    overflow: hidden !important;
+    background: #000 !important;
+  }
 
-    object-fit: contain !important;
-    object-position: center center !important;
+  .game {
+    width: 1400px !important;
+    max-width: none !important;
+    margin: 0 !important;
+    position: fixed !important;
+    top: 0 !important;
+    left: 50% !important;
+    transform: translateX(-50%) scale(0.52) !important;
+    transform-origin: top center !important;
+  }
+
+  .conteudo {
+    height: 620px !important;
+  }
+
+  #capa.capa {
+    width: 100vw !important;
+    height: 100dvh !important;
+    position: fixed !important;
+    inset: 0 !important;
+    background-image: url("assets/capa.png") !important;
+    background-size: 96% auto !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+    transform: none !important;
+    overflow: hidden !important;
   }
 
   #capa .btn-jogar {
     font-size: 18px !important;
-    padding: 10px 28px !important;
+    padding: 9px 28px !important;
+  }
+
+  #capa .menu {
+    top: 16px !important;
   }
 
   #capa .menu button {
-    font-size: 12px !important;
-    padding: 6px 12px !important;
+    height: 30px !important;
+    font-size: 10px !important;
+    padding: 0 10px !important;
   }
 
   #capa .capa-centro {
-    top: 78% !important;
+    top: 80% !important;
   }
-
 }
