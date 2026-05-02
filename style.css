@@ -724,12 +724,16 @@ body {
     top: 80% !important;
   }
 }
-/* ===== AJUSTE FINO DO CONTADOR (NÃO AFETA MAIS NADA) ===== */
+/* ===== DESCER PERGAMINHO E RESPOSTAS NO MOBILE ===== */
 
-.topo {
-  top: 6px !important; /* 🔥 sobe o contador */
-}
+@media screen and (orientation: landscape) and (max-height: 600px) {
 
-#contador {
-  margin-top: -8px !important; /* 🔥 separa do pergaminho */
+  .pergaminho-img {
+    top: -10px !important;
+  }
+
+  #respostas {
+    top: 0px !important;
+  }
+
 }
