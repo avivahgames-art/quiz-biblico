@@ -1317,26 +1317,19 @@
     height: 620px !important;
   }
 }
-/* ================= CAPA MOBILE FINAL (CORRIGIDO) ================= */
-
+/* ===== FORÇAR CAPA MOBILE FINAL ===== */
 @media screen and (orientation: landscape) {
 
-  html, body {
-    margin: 0 !important;
-    padding: 0 !important;
-    overflow: hidden !important;
-    background: #000 !important;
-  }
-
-  #capa {
+  #capa.capa {
     width: 1400px !important;
     max-width: none !important;
+    height: 100vh !important;
 
     position: fixed !important;
     top: 0 !important;
     left: 50% !important;
 
-    transform: translateX(-50%) scale(0.72) !important; /* 👈 AJUSTE AQUI */
+    transform: translateX(-50%) scale(0.75) !important;
     transform-origin: top center !important;
   }
 
