@@ -758,7 +758,7 @@ body {
     top: 0 !important;
     left: 50% !important;
 
-    transform: translateX(-50%) scale(0.52) !important;
+    transform: translateX(-50%) scale(0.48) !important;
     transform-origin: top center !important;
   }
 
