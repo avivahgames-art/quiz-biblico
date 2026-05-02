@@ -196,7 +196,7 @@ body {
   box-sizing: border-box;
   text-align: center;
   position: relative;
-  top: -40px;
+  top: 0px;
 }
 
 .pergaminho-img span {
@@ -211,7 +211,7 @@ body {
   max-width: 100%;
   margin-top: -20px;
   position: relative;
-  top: -30px;
+  top: 5px;
 }
 
 .resposta {
@@ -278,19 +278,6 @@ body {
   height: 100%;
   width: 0%;
   background: linear-gradient(90deg, #209b19, #83ff3d);
-}
-/* ===== AJUSTE SOMENTE PC (NÃO AFETA MOBILE) ===== */
-
-@media screen and (min-width: 1024px) {
-
-  .conteudo {
-    padding-top: 40px !important; /* 🔽 desce tudo */
-  }
-
-  .painel {
-    margin-top: 20px !important; /* 🔽 ajusta fino */
-  }
-
 }
 
 /* ================= OVERLAYS ACERTO/ERRO ================= */
@@ -676,6 +663,14 @@ body {
   border-radius: 4px;
   cursor: pointer;
 }
+/* ===== PC: REMOVER SCROLL ===== */
+@media screen and (min-width: 1024px) {
+
+  body {
+    overflow: hidden;
+  }
+
+}
 
 /* ================= MOBILE: JOGO CERTO + CAPA AJUSTADA ================= */
 
@@ -745,16 +740,9 @@ body {
     padding-top: 160px !important; /* desce somente o pergaminho e as respostas no mobile */
   }
 }
-/* ===== MOBILE SOMENTE PÁGINA FINAL E ÚLTIMA PÁGINA ===== */
+/* ===== FORÇAR MOBILE SOMENTE TELA FINAL E ÚLTIMA TELA ===== */
 
 @media screen and (orientation: landscape) and (max-height: 600px) {
-
-  body #resultado {
-    width: 100vw !important;
-    height: 100vh !important;
-    overflow: hidden !important;
-    padding: 0 !important;
-  }
 
   body #resultado .resultado-card {
     width: 1400px !important;
@@ -766,48 +754,8 @@ body {
     top: 0 !important;
     left: 50% !important;
 
-    transform: translateX(-50%) scale(0.46) !important;
+    transform: translateX(-50%) scale(0.52) !important;
     transform-origin: top center !important;
-
-    display: grid !important;
-    grid-template-columns: 38% 58% !important;
-    grid-template-rows: auto auto 1fr auto !important;
-    gap: 8px 22px !important;
-  }
-
-  body #resultado .pergaminho-final {
-    grid-column: 1 / 3 !important;
-  }
-
-  body #resultado .mensagem-final {
-    grid-column: 1 / 3 !important;
-  }
-
-  body #resultado .resultado-conteudo {
-    grid-column: 1 !important;
-    grid-row: 3 !important;
-    display: flex !important;
-    flex-direction: column !important;
-    transform: none !important;
-  }
-
-  body #resultado .ranking-final {
-    grid-column: 2 !important;
-    grid-row: 3 !important;
-    max-height: 520px !important;
-  }
-
-  body #resultado .botoes-final {
-    grid-column: 1 / 3 !important;
-    grid-row: 4 !important;
-    transform: none !important;
-  }
-
-  body #final-biblico {
-    width: 100vw !important;
-    height: 100vh !important;
-    overflow: hidden !important;
-    background: #000 !important;
   }
 
   body #final-biblico::before {
@@ -818,16 +766,24 @@ body {
     top: 0 !important;
     left: 50% !important;
 
-    transform: translateX(-50%) scale(0.46) !important;
+    transform: translateX(-50%) scale(0.48) !important;
     transform-origin: top center !important;
-
-    background-size: contain !important;
   }
 
   body #final-biblico .botoes-final-biblico {
     top: 35px !important;
-    right: 45px !important;
-    transform: scale(0.46) !important;
+    right: 110px !important;
+    transform: scale(0.52) !important;
     transform-origin: top right !important;
   }
+}
+
+/* ================= AJUSTE PC JOGO - DESCE SOMENTE PERGAMINHO E RESPOSTAS ================= */
+
+@media screen and (min-width: 1024px) and (min-height: 601px) {
+
+  #jogo.game .painel {
+    transform: translateY(30px) !important;
+  }
+
 }
