@@ -724,3 +724,12 @@ body {
     top: 80% !important;
   }
 }
+/* ===== AJUSTE FINO DO CONTADOR (NÃO AFETA MAIS NADA) ===== */
+
+.topo {
+  top: 6px !important; /* 🔥 sobe o contador */
+}
+
+#contador {
+  margin-top: -8px !important; /* 🔥 separa do pergaminho */
+}
