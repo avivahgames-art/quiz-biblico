@@ -1317,3 +1317,21 @@
     height: 620px !important;
   }
 }
+/* ================= MOBILE CAPA (IGUAL AO PC) ================= */
+
+@media screen and (orientation: landscape) and (max-height: 600px) {
+
+  .capa {
+    width: 1400px !important;
+    max-width: none !important;
+    margin: 0 !important;
+
+    position: fixed !important;
+    top: 0 !important;
+    left: 50% !important;
+
+    transform: translateX(-50%) scale(0.52) !important;
+    transform-origin: top center !important;
+  }
+
+}
