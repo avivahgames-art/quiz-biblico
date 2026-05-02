@@ -743,20 +743,29 @@ body {
     padding: 0 !important;
   }
 
-  body #resultado .resultado-card {
-    width: 1400px !important;
-    height: 700px !important;
-    max-width: none !important;
-    max-height: none !important;
+ body #resultado .resultado-card {
+  width: 1400px !important;
+  height: 640px !important; /* 🔥 reduz altura */
 
-    position: fixed !important;
-    top: 0 !important;
-    left: 50% !important;
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: space-between !important;
 
-    transform: translateX(-50%) scale(0.44) !important;
-    transform-origin: top center !important;
-  }
+  position: fixed !important;
+  top: 10px !important; /* 🔥 desce um pouco */
+  left: 50% !important;
 
+  transform: translateX(-50%) scale(0.46) !important;
+  transform-origin: top center !important;
+}
+body #resultado .botoes-final {
+  margin-top: 5px !important;
+  transform: scale(0.9) !important;
+}
+
+body #resultado .resultado-conteudo {
+  transform: scale(0.92);
+}
   body #final-biblico {
     width: 100vw !important;
     height: 100vh !important;
