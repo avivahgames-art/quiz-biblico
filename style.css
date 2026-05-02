@@ -1286,7 +1286,8 @@
 #resultado .resultado-card .ranking-final table td {
   font-size: 12px !important;
 }
-/* ===== MOBILE LANDSCAPE - OCUPAR TELA TODA ===== */
+
+/* ===== MOBILE LANDSCAPE - IGUAL AO PC ===== */
 
 @media screen and (orientation: landscape) and (max-width: 1000px) {
   html,
@@ -1316,39 +1317,57 @@
   }
 
   .topo {
-    top: 10px !important;
+    top: 6px !important;
     left: 18px !important;
     right: 18px !important;
+    font-size: 12px !important;
+  }
+
+  .btn-inicio,
+  .pontos,
+  .box-info {
+    height: 30px !important;
+    padding: 0 10px !important;
+    font-size: 12px !important;
   }
 
   .painel {
-    padding: 72px 30px 70px 0 !important;
+    padding: 55px 35px 45px 0 !important;
   }
 
   .pergaminho-img {
-    width: 560px !important;
-    height: 105px !important;
-    top: -28px !important;
+    width: 500px !important;
+    height: 82px !important;
+    top: -20px !important;
+    padding: 0 60px !important;
   }
 
   .pergaminho-img span {
-    font-size: 22px !important;
+    font-size: 18px !important;
   }
 
   #respostas {
-    width: 500px !important;
-    top: -42px !important;
+    width: 470px !important;
+    top: -45px !important;
   }
 
   .resposta {
-    height: 46px !important;
-    margin: 6px 0 !important;
-    font-size: 15px !important;
+    height: 40px !important;
+    margin: 5px 0 !important;
+    font-size: 13px !important;
+    padding: 0 12px !important;
+  }
+
+  .letra {
+    width: 24px !important;
+    height: 24px !important;
+    font-size: 12px !important;
   }
 
   .rodape {
-    bottom: 8px !important;
+    bottom: 6px !important;
     left: 18px !important;
     right: 18px !important;
+    font-size: 11px !important;
   }
 }
