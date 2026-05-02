@@ -729,7 +729,7 @@ body {
 @media screen and (orientation: landscape) and (max-height: 600px) {
 
   #jogo.game .painel {
-    transform: translateY(35px) !important;
+    transform: translateY(60px) !important;
   }
 
 }
