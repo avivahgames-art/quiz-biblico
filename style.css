@@ -1295,7 +1295,6 @@
     margin: 0 !important;
     padding: 0 !important;
     width: 100vw !important;
-    height: 100vh !important;
     overflow: hidden !important;
     background: #000 !important;
   }
@@ -1316,4 +1315,28 @@
   .conteudo {
     height: 620px !important;
   }
+}
+/* ================= MOBILE PERFEITO (SEM SCROLL) ================= */
+
+@media screen and (orientation: landscape) and (max-height: 600px) {
+
+  html, body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden; /* 🚫 remove scroll */
+    background: #000;
+  }
+
+  .game {
+    width: 1400px; /* tamanho original do PC */
+    max-width: none;
+
+    position: fixed;
+    top: 0;
+    left: 50%;
+
+    transform: translateX(-50%) scale(0.58); /* 🔥 ajuste ideal */
+    transform-origin: top center;
+  }
+
 }
