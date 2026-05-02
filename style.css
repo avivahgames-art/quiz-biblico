@@ -1286,29 +1286,30 @@
 #resultado .resultado-card .ranking-final table td {
   font-size: 12px !important;
 }
-/* ===== CAPA MOBILE COM IMAGEM <img> ===== */
+/* ===== CAPA MOBILE ISOLADA (NÃO AFETA O JOGO) ===== */
 
 @media screen and (orientation: landscape) {
 
-  html body #capa img {
+  #capa .img-capa {
     width: 100vw !important;
     height: 100vh !important;
 
-    object-fit: contain !important; /* deixa a imagem mais distante */
+    object-fit: contain !important;
     object-position: center center !important;
   }
 
-  html body #capa .btn-jogar {
+  #capa .btn-jogar {
     font-size: 18px !important;
     padding: 10px 28px !important;
   }
 
-  html body #capa .menu button {
+  #capa .menu button {
     font-size: 12px !important;
     padding: 6px 12px !important;
   }
 
-  html body #capa .capa-centro {
+  #capa .capa-centro {
     top: 78% !important;
   }
+
 }
