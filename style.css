@@ -1302,12 +1302,13 @@
   .game {
     width: 1400px !important;
     max-width: none !important;
+    height: 100dvh !important;
     margin: 0 !important;
     transform: scale(0.57);
     transform-origin: top left;
   }
 
   .conteudo {
-    height: 620px !important;
+    height: 100dvh !important;
   }
 }
