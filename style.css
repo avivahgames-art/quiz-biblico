@@ -785,5 +785,36 @@ body {
   #jogo.game .painel {
     transform: translateY(30px) !important;
   }
+}
+/* ===== AJUSTE SOMENTE iOS / IPHONE ===== */
 
+@supports (-webkit-touch-callout: none) {
+  @media screen and (orientation: landscape) and (max-height: 600px) {
+
+    /* JOGO */
+    .game {
+      transform: translateX(-50%) scale(0.48) !important;
+    }
+
+    /* CAPA */
+    #capa.capa {
+      background-size: 92% auto !important;
+    }
+
+    /* PÁGINA FINAL */
+    body #resultado .resultado-card {
+      transform: translateX(-50%) scale(0.43) !important;
+    }
+
+    /* ÚLTIMA PÁGINA */
+    body #final-biblico::before {
+      transform: translateX(-50%) scale(0.43) !important;
+    }
+
+    body #final-biblico .botoes-final-biblico {
+      transform: scale(0.43) !important;
+      right: 130px !important;
+    }
+
+  }
 }
