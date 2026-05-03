@@ -842,3 +842,29 @@ body {
 
   }
 }
+/* ===== AJUSTE SOMENTE ANDROID (TELA FINAL + ÚLTIMA) ===== */
+
+@media screen and (orientation: landscape) and (max-height: 600px) {
+
+  /* evita conflito com iOS */
+  @supports not (-webkit-touch-callout: none) {
+
+    /* 🔽 TELA FINAL */
+    body #resultado .resultado-card {
+      transform: translateX(-50%) scale(0.44) !important;
+    }
+
+    /* 🔽 ÚLTIMA TELA */
+    body #final-biblico::before {
+      transform: translateX(-50%) scale(0.42) !important;
+    }
+
+    body #final-biblico .botoes-final-biblico {
+      transform: scale(0.44) !important;
+      right: 120px !important;
+    }
+
+  }
+}
+
+
